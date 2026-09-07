@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OUR TYPE | 사회생활 성격 테스트</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-gradient"></div>
+
+    <main class="app-container">
+
+        <!-- =========================
+             랜딩 페이지
+        ========================== -->
+
+        <section id="landing" class="screen active">
+
+            <div class="landing-content">
+
+                <div class="logo">
+                    OUR<span>TYPE</span>
+                </div>
+
+                <div class="badge">
+                    SOCIAL LIFE PERSONALITY TEST
+                </div>
+
+                <h1>
+                    회사에서 나는<br>
+                    <span>어떤 캐릭터일까?</span>
+                </h1>
+
+                <p class="description">
+                    회의할 때의 나,<br>
+                    회식할 때의 나,<br>
+                    상사 앞에서의 나는 조금 다를지도 모릅니다.
+                </p>
+
+                <div class="info-box">
+
+                    <div class="info-item">
+                        <strong>10</strong>
+                        <span>QUESTIONS</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="info-item">
+                        <strong>3</strong>
+                        <span>MINUTES</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="info-item">
+                        <strong>4</strong>
+                        <span>TYPES</span>
+                    </div>
+
+                </div>
+
+                <button id="startBtn" class="main-button">
+                    나의 사회생활 유형 알아보기
+                    <span>→</span>
+                </button>
+
+                <p class="notice">
+                    ※ 재미와 자기이해를 위한 성격 테스트입니다.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             테스트 페이지
+        ========================== -->
+
+        <section id="test" class="screen">
+
+            <div class="test-wrapper">
+
+                <header class="test-header">
+
+                    <div class="small-logo">
+                        OUR<span>TYPE</span>
+                    </div>
+
+                    <div class="question-count">
+                        QUESTION
+                        <span id="currentQuestion">01</span>
+                        /
+                        <span id="totalQuestion">10</span>
+                    </div>
+
+                </header>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+
+                    <span id="progressText">10%</span>
+
+                </div>
+
+
+                <div id="questionContainer" class="question-container">
+
+                    <!-- JavaScript로 생성 -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             로딩 페이지
+        ========================== -->
+
+        <section id="loading" class="screen">
+
+            <div class="loading-content">
+
+                <div class="loading-icon">
+                    <div class="spinner"></div>
+                </div>
+
+                <h2>
+                    당신의 사회생활을<br>
+                    분석하고 있습니다
+                </h2>
+
+                <p>
+                    회의, 업무, 인간관계,<br>
+                    퇴근 습관까지 분석 중...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             결과 페이지
+        ========================== -->
+
+        <section id="result" class="screen">
+
+            <div class="result-wrapper">
+
+                <div class="result-top">
+
+                    <div class="logo">
+                        OUR<span>TYPE</span>
+                    </div>
+
+                    <p class="result-label">
+                        당신의 사회생활 캐릭터는
+                    </p>
+
+                    <div id="resultEmoji" class="result-emoji">
+                        👔
+                    </div>
+
+                    <h1 id="resultTitle">
+                        회의실 점령 부장
+                    </h1>
+
+                    <p id="resultSubtitle" class="result-subtitle">
+                        회의 시작 3분 만에 결론 내리는 사람
+                    </p>
+
+                </div>
+
+
+                <div class="result-description-card">
+
+                    <h3>당신은 이런 사람입니다</h3>
+
+                    <p id="resultDescription">
+                        결과 설명이 표시됩니다.
+                    </p>
+
+                </div>
+
+
+                <div class="stat-section">
+
+                    <h3>사회생활 능력치</h3>
+
+                    <div class="stat-item">
+
+                        <div class="stat-label">
+                            <span>사회성</span>
+                            <span id="socialScore">80</span>
+                        </div>
+
+                        <div class="stat-bar">
+                            <div id="socialBar" class="stat-fill"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-label">
+                            <span>리더십</span>
+                            <span id="leadershipScore">90</span>
+                        </div>
+
+                        <div class="stat-bar">
+                            <div id="leadershipBar" class="stat-fill"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-label">
+                            <span>창의성</span>
+                            <span id="creativityScore">70</span>
+                        </div>
+
+                        <div class="stat-bar">
+                            <div id="creativityBar" class="stat-fill"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <div class="stat-label">
+                            <span>계획성</span>
+                            <span id="planningScore">85</span>
+                        </div>
+
+                        <div class="stat-bar">
+                            <div id="planningBar" class="stat-fill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="company-life-card">
+
+                    <span class="card-icon">💬</span>
+
+                    <div>
+
+                        <h3>회사에서의 당신</h3>
+
+                        <p id="companyLife">
+                            회사생활 모습이 표시됩니다.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-buttons">
+
+                    <button id="shareBtn" class="share-button">
+                        결과 공유하기
+                    </button>
+
+                    <button id="restartBtn" class="restart-button">
+                        다시 검사하기
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast" class="toast">
+        결과가 클립보드에 복사되었습니다!
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
